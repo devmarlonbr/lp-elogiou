@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+}
+
+
+.container {
+  max-width: 1120px;
+}
+
+.timeline {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 14rem);
+  background-color: #EAE5FF;
+  transition: 1s all;
+}
+.timeline-track {
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform-origin: 50% 0%;
+            transform: translate(0px, 0px);
+            background-color: #4824F9;
+            transition: 1s all;
+}
+
+.active {
+  display: block !important;
+  opacity: 1;
+}
+
+.image-scroll {
+  animation: enterScreen 1.25s ease;
+}
+
+@keyframes enterScreen {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.toggle-active {
+  background-color: #4824F9 !important;
+  color: #fff !important;
+}
+
+.container-toggle-active {
+  display: block;
+}
+
+.shadow-green-grid {
+  box-shadow: 0px 28px 52px 0px rgba(15, 89, 14, 0.15);
+}
+
+
+.accordion-active {
+}
+
+.accordion-active
+  > button
+  > .accordion-head-info
+  > .accordion-icon
+  > .accordion-icon-less {
+  display: block;
+}
+
+.accordion-icon-less {
+  display: none;
+}
+
+.accordion-active
+  > button
+  > .accordion-head-info
+  > .accordion-icon
+  > .accordion-icon-plus {
+  display: none;
+}
+
+.accordion-text {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-active > .accordion-text {
+  animation: 0.25s ease;
+  animation-name: result_box_appearance;
+  max-height: 320px;
+  overflow: visible;
+}
+
+@keyframes result_box_appearance {
+  0% {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 320px;
+    overflow: visible;
+  }
+}
+
+.animate-floating {
+ animation: float 3s ease infinite;
+}
+
+.animate-floating:nth-child(1) {
+  animation-delay: 600ms;
+ }
+
+ .animate-floating:nth-child(2) {
+  animation-delay: 350ms;
+ }
+
+ .animate-floating:nth-child(3) {
+  animation-delay: 1200ms;
+ }
+
+ .animate-floating:nth-child(4) {
+  animation-delay: 900ms;
+ }
+
+ .animate-floating:nth-child(4) {
+  animation-delay: 1400ms;
+ }
+
+ .animate-floating-stars {
+  animation: floatStars 4s ease infinite;
+ }
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-32px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes floatStars {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

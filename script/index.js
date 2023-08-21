@@ -1,0 +1,118 @@
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      
+      images.forEach(image => {
+        image.classList.remove("active")
+      })
+      
+      switch (entry.target.dataset.itemScroll) {
+        case "01":
+          timelineTrack.style.height = "0%"
+          document.querySelector(".image-01").classList.add("active")
+          break;
+        case "02":
+          timelineTrack.style.height = "32%"
+          document.querySelector(".image-02").classList.add("active")
+           break;
+        case "03":
+          timelineTrack.style.height = "52%"
+          document.querySelector(".image-03").classList.add("active")
+           break;
+        case "04":
+          timelineTrack.style.height = "74%"
+          document.querySelector(".image-04").classList.add("active")
+           break;
+        case "05":
+          timelineTrack.style.height = "100%"
+          document.querySelector(".image-05").classList.add("active")
+           break;
+        default:
+          break;
+      }
+
+    } else {
+      return
+    }
+  });
+});
+
+const timelineTrack = document.querySelector(".timeline-track")
+const elements = document.querySelectorAll(".item-scroll");
+const images = document.querySelectorAll(".image-scroll");
+elements.forEach((element) => observer.observe(element));
+
+// button toggle
+
+let toggleActive = "01"
+
+function handleButtonToggleActive(e, buttonId){
+
+  buttonToggle.forEach((button) => {
+    button.classList.remove("toggle-active")
+  })
+  e.target.classList.add("toggle-active")
+
+  if(buttonId === "01"){
+    mosaico.classList.add("container-toggle-active")
+    carrosel.classList.remove("container-toggle-active")
+  } else {
+    carrosel.classList.add("container-toggle-active")
+    mosaico.classList.remove("container-toggle-active")
+  }
+
+}
+
+const buttonToggle = document.querySelectorAll(".button-toggle")
+const containerToggle = document.querySelector(".container-toggle")
+const mosaico = document.querySelector(".mosaico")
+const carrosel = document.querySelector(".carrosel")
+
+buttonToggle.forEach(button => {
+  button.addEventListener("click", (e) => {
+    handleButtonToggleActive(e, e.target.dataset.buttonToggle)
+  })
+})
+
+// accordion
+
+const accordion = document.querySelectorAll(".accordion-item");
+
+const accordionVisibleClass = "accordion-active";
+
+const accordionHandleClick = (e) => {
+  console.log(e.target);
+  console.log(e.target.parentNode.classList);
+
+  const alreadyHasActive = e.target.parentNode.classList.contains(
+    accordionVisibleClass
+  );
+  if (alreadyHasActive) {
+    e.target.parentNode.classList.remove(accordionVisibleClass);
+  } else {
+    accordion.forEach((acc) => {
+      acc.classList.remove(accordionVisibleClass);
+    });
+
+    e.target.parentNode.classList.add(accordionVisibleClass);
+  }
+};
+
+accordion.forEach((accItem) => {
+  console.log(accItem);
+  accItem.addEventListener("click", accordionHandleClick);
+});
+
+const rotate01 = document.querySelector("#rotate-01")
+const rotate02 = document.querySelector("#rotate-02")
+
+
+let pageOffset = 0
+window.addEventListener("scroll", (e) => {
+
+  let calcTranslate = window.pageYOffset / 120
+  rotate02.style.transform = `translateX(${calcTranslate}%)`
+  rotate01.style.transform = `translateX(-${calcTranslate}%)`
+
+
+})
