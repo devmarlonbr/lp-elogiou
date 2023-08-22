@@ -116,3 +116,45 @@ window.addEventListener("scroll", (e) => {
 
 
 })
+
+
+const observerWeb = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("intersect-show");
+      entry.target.classList.remove("intersect-hidden");
+    } else {
+      entry.target.classList.add("intersect-hidden");
+      entry.target.classList.remove("intersect-show");
+    }
+  });
+});
+
+const header = document.querySelector("#header");
+const headernavbar = document.querySelector("#header-navbar");
+const buttonnavbar = document.querySelector("#button-navbar");
+
+buttonnavbar.addEventListener("click", (e) => {
+  let isActive = headernavbar.classList.contains("show-navbar")
+  if(isActive){
+    headernavbar.classList.remove("show-navbar")
+  } else {
+    headernavbar.classList.add("show-navbar")
+  }
+})
+
+const elementsObserver = document.querySelectorAll(".intersect");
+elementsObserver.forEach((element) => observerWeb.observe(element));
+
+
+window.onscroll = function () {
+  handleScroll();
+};
+
+const handleScroll = () => {
+  if (window.pageYOffset > 90) {
+    header.classList.add("bg-header-fixed");
+  } else {
+    header.classList.remove("bg-header-fixed");
+  }
+};

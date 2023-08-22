@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elogiou - Landing Page</title>
@@ -10,32 +10,35 @@
 </head>
 <body >
 
-  <header   class="bg-primaryPurple w-full h-[76px]">
-    <div class="h-full container mx-auto flex items-center justify-between">
-      <div class="max-w-[119px] w-full">
+  <header id="header" class="fixed top-0 z-50 bg-primaryPurple w-full md:h-[76px]">
+    <div class="h-full container mx-auto flex flex-col md:flex-row items-center justify-between relative">
+      <div class="h-[76px] md:h-auto flex items-center justify-between md:max-w-[119px] px-5 md:px-0 w-full ">
         <a href="#">
           <img src="./assets/logo.svg" alt="">
         </a>
+        <button id="button-navbar" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1.5em" height="1.5em" viewBox="0 0 32 32" data-icon="@elogiou:md:bars" class="iconify text-lavender text-xl iconify--elogiou iconify--md"><path d="M6.66406 8.58594H25.3307" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.66406 24.5859H25.3307" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6.66406 16.5879H25.3307" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </button>
       </div>
-      <div class="ml-12 w-full flex items-center justify-between">
-        <ul class="flex items-center gap-6">
-          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#">Início</a></li>
-          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#">Demonstração</a></li>
-          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#">Funcionalidades</a></li>
-          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#">Dúvidas</a></li>
-          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#">Suporte</a></li>
+      <div id="header-navbar" class="md:ml-8 hidden flex-1 md:flex justify-between items-center">
+        <ul class="flex flex-col md:flex-row items-center gap-6">
+          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#inicio">Início</a></li>
+          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#demo">Demonstração</a></li>
+          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#captacao">Funcionalidades</a></li>
+          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#duvidas">Dúvidas</a></li>
+          <li><a class="font-proximaNova font-semibold text-sm14 text-white" href="#falta-link">Suporte</a></li>
         </ul>
-        <div class="bg-white rounded-lg flex items-center gap-2 px-4 py-2" href="">
+        <a class="w-full md:w-auto justify-center bg-white rounded-lg flex items-center gap-2 px-4 py-2 md:mt-0" href="#planos">
           <p class="font-proximaNova font-semibold text-button16 text-primaryPurple">Começar</p>
           <img src="./assets/arrow-up-right-purple.svg" alt="">
-        </div>
+        </a>
       </div>
     </div>
   </header>
 
-  <main class="bg-primaryPurple w-full pt-[120px] pb-[90px] relative">
+  <main id="inicio" class="px-5 lg:px-0 bg-primaryPurple w-full pt-[212px] pb-[90px] relative">
     
-    <div>
+    <div class="hidden md:block">
       <div class="animate-floating absolute left-[120px] flex items-center gap-2 px-4 py-2 rounded-[46px] bg-[#DBD5FE]">
         <img src="./assets/purple-heart.svg" alt="" srcset="">
         <p class="text-head32 font-proximaNova font-bold text-primaryPurple">
@@ -58,24 +61,24 @@
         <img src="./assets/five-stars.svg" alt="" srcset="">
       </div>
 
-      <h1 class="mt-12 max-w-[672px] mx-auto text-head56 font-bold text-center text-white font-proximaNova leading-tight">Mais Depoimentos. <br>
+      <h1 class="mt-12 max-w-[672px] mx-auto text-head40 md:text-head56 font-bold text-center text-white font-proximaNova leading-tight">Mais Depoimentos. <br>
         Mais vendas. Mais receita.</h1>
 
       <p class="mt-3 max-w-[577px] mx-auto text-center text-white font-proxima font-normal text-body16 leading-normal">Facilite o processo de <b>coletar</b>, <b>organizar</b> e <b>divulgar</b> os depoimentos dos seus clientes. Colete em <b>vídeo</b>, <b>áudio</b>, <b>texto</b> e de diversas redes sociais, como: <b>Instagram</b>, <b>WhatsApp</b>, <b>LinkedIn</b>, <b>ReclameAqui</b>, entre outras.</p>
 
-      <div class="max-w-[352px] flex items-center gap-2 mt-12">
-        <div class="w-fuil bg-green px-4 py-[10px] rounded-lg flex items-center gap-2">
+      <div class="md:max-w-[352px] w-full  flex flex-col md:flex-row md:items-center gap-2 mt-12">
+        <a class="hover:-translate-y-2 transition-btn transition-btn w-fuil bg-green px-4 py-[10px] rounded-lg flex justify-center items-center gap-2">
           <p class="text-button16 font-semibold text-white">Começar Agora</p>
           <img src="./assets/arrow-up-right.svg" alt="" srcset="">
-        </div>
+        </a>
 
-        <div class="w-fuil bg-white px-4 py-[10px] rounded-lg flex items-center gap-2">
+        <a class="hover:-translate-y-2 transition-btn w-fuil bg-white px-4 py-[10px] rounded-lg flex  justify-center items-center gap-2">
           <p class="text-button16 font-semibold text-primaryPurple">Ver vídeo <span class="text-sm12">(3min)</span></p>
           <img src="./assets/youtube.svg" alt="" srcset="">
-        </div>
+        </a>
       </div>
 
-      <div class="flex items-center gap-8 mt-5">
+      <div class="flex items-center flex-wrap justify-center gap-8 mt-12 md:mt-5">
         <div class="flex items-center gap-1">
           <img class="w-[20px]" src="./assets/credit-card.svg" alt="" srcset="">
           <p class="text-body14 text-white font-regular font-proximaNova">7 dias de garantia</p>
@@ -154,17 +157,16 @@
     </div>
   </div>
 
-  <section class="bg-primaryPurple w-full ">
+  <section id="demo" class="bg-primaryPurple w-full">
     <div  class="w-full container mx-auto">
       <div class="z-10" style="position: relative; padding-bottom: calc(57.52173913043478% + 44px); height: 0;"><iframe src="https://app.supademo.com/embed/cllfzzzkp1ri2yd19btu70ky9" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
     </div> 
   </section>
 
+  <section  class="px-5 lg:px-0 w-full bg-white pt-24 -mt-3">
+    <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-10">
 
-  <section  class="w-full bg-white pt-24 -mt-3">
-    <div class="container mx-auto w-full grid grid-cols-3 gap-10">
-
-      <div class="flex flex-col items-center gap-3">
+      <div class="intersect intersect-animate-bottom intersect-transition-40 intersect-child flex flex-col items-center gap-3">
         <img src="./assets/five-stars.svg" alt="" srcset="">
         <p class="text-center font-proximaNova font-regular text-black text-body14">”Plataforma incrível! Ajuda muito na captação de depoimentos e em mostrar ao público o quão interessante é nossa plataforma!</p>
         <div class="flex items-center gap-2">
@@ -175,7 +177,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center gap-3">
+      <div class="intersect intersect-animate-bottom intersect-transition-40 intersect-child flex flex-col items-center gap-3">
         <img src="./assets/five-stars.svg" alt="" srcset="">
         <p class="text-center font-proximaNova font-regular text-black text-body14">“A <a class="text-primaryPurple" href="">@Elogioubr</a> é uma plataforma maravilhosa com um custo que cabe no nosso bolso e um suporte rápido e incrível”</p>
         <div class="flex items-center gap-2">
@@ -186,7 +188,7 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center gap-3">
+      <div class="intersect intersect-animate-bottom intersect-transition-40 intersect-child flex flex-col items-center gap-3">
         <img src="./assets/five-stars.svg" alt="" srcset="">
         <p class="text-center font-proximaNova font-regular text-black text-body14">“Ter um carrossel de feedbacks passa muito mais credibilidade para a <a class="text-primaryPurple" href="">@Calmostore</a> os clientes sempre querem ver alguém usando”</p>
         <div class="flex items-center gap-2">
@@ -201,7 +203,7 @@
     </div>
   </section> 
 
-  <section id="myDiv" class="w-full bg-white pt-[124px]">
+  <section id="captacao" class="px-5 lg:px-0 w-full bg-white pt-[124px]">
     <div class="container mx-auto w-full">
 
       <div class="w-full flex flex-col items-center">
@@ -209,14 +211,14 @@
           <img src="./assets/customer.svg" alt="" srcset="">
           <span class="font-semibold font-proximaNova text-caption16 ">MAIS CLIENTES</span>
         </div>
-        <h2 class="mt-4 max-w-[610px] text-center font-light font-proximaNova text-black text-head48 leading-tight"><b class="font-semibold">Entenda como a Elogiou</b>
+        <h2 class="mt-4 max-w-[610px] text-center font-light font-proximaNova text-black text-head32 md:text-head48 leading-tight"><b class="font-semibold">Entenda como a Elogiou</b>
           aumenta a sua conversão</h2>
       </div>
 
 
       <div class="w-full flex justify-between mt-[96px]">
 
-        <div class="max-w-[440px] w-full h-[440px] sticky top-[18rem] ">
+        <div class="hidden md:block max-w-[440px] w-full h-[440px] sticky top-[18rem] ">
 
           <div class="image-scroll image-01 active hidden opacity-0">
             <img src="./assets/item-01.png" alt="" srcset="">
@@ -242,7 +244,7 @@
         </div>
  
         <div class="relative">
-          <div class="timeline">
+          <div class="hidden md:block timeline">
             <div 
             class="timeline-track"
             style="
@@ -257,8 +259,8 @@
             ></div>
           </div>
           <ul class="relative">
-            <li data-item-scroll="01" class="item-scroll pl-[96px] relative ">
-               <div class="w-5 h-5 rounded-full bg-primaryPurple grid place-content-center absolute top-0 -left-[9px]">
+            <li data-item-scroll="01" class="item-scroll md:pl-[96px] relative ">
+               <div class="hidden md:grid w-5 h-5 rounded-full bg-primaryPurple  place-content-center absolute top-0 -left-[9px]">
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
@@ -269,7 +271,7 @@
                       <img src="./assets/star.svg" alt="" srcset="">
                     </div>
                   </div>
-                  <h3 class="mt-3 text-head32 text-black font-bold leading-tight">Colete feedbacks dos seus clientes com apenas 1 clique!</h3>
+                  <h3 class="mt-3 text-head24 md:text-head32 text-black font-bold leading-tight">Colete feedbacks dos seus clientes com apenas 1 clique!</h3>
                   <p class="mt-3 text-body18 text-black font-normal">Criamos uma solução incrível que te faz <b>ganhar tempo</b> e aumenta <b>credibilidade</b> do seu negócio. Confira:</p>
                   <div class="mt-3">
                     <span class="font-proximaNova font-semibold text-sm14 text-black uppercase">Integrações</span>
@@ -330,14 +332,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="flex items-center gap-2 mt-8 ">
+                  <a href="#planos" class="flex items-center gap-2 mt-8 ">
                     <p class="font-proximaNova font-semibold text-caption16 text-black">Quero começar</p>
                     <img src="./assets/chevron-right.svg" alt="">
-                 </div>
+                 </a>
                 </div>
             </li> 
-            <li data-item-scroll="02" class="item-scroll pl-[96px] relative mt-[296px]">
-              <div class="w-5 h-5 rounded-full bg-primaryPurple grid place-content-center absolute top-[172px] -left-[9px]">
+            <li data-item-scroll="02" class="item-scroll md:pl-[96px] relative md:mt-[296px] mt-[64px]">
+              <div class="hidden md:grid w-5 h-5 rounded-full bg-primaryPurple  place-content-center absolute top-[172px] -left-[9px]">
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
@@ -348,16 +350,16 @@
                       <img src="./assets/coin.svg" alt="" srcset="">
                     </div>
                   </div>
-                  <h3 class="mt-3 text-head32 text-black font-bold leading-tight">Transforme seus clientes em seus melhores vendedores</h3>
+                  <h3 class="mt-3 text-head24 md:text-head32 text-black font-bold leading-tight">Transforme seus clientes em seus melhores vendedores</h3>
                   <p class="mt-3 text-body18 text-black font-normal">Recomendações de clientes podem <b>aumentar até 30%</b> na decisão de compra, <b>use essa taxa a seu favor!</b></p>
-                  <div class="flex items-center gap-2 mt-8 ">
+                  <a href="#planos" class="flex items-center gap-2 mt-8 ">
                     <p class="font-proximaNova font-semibold text-caption16 text-black">Quero começar</p>
                     <img src="./assets/chevron-right.svg" alt="">
-                 </div>
+                 </a>
                 </div>
             </li> 
-            <li  data-item-scroll="03" class="item-scroll pl-[96px] relative mt-[296px]">
-              <div class="w-5 h-5 rounded-full bg-primaryPurple grid place-content-center absolute top-[172px] -left-[9px]">
+            <li  data-item-scroll="03" class="item-scroll md:pl-[96px] relative md:mt-[296px] mt-[64px]">
+              <div class="hidden md:grid w-5 h-5 rounded-full bg-primaryPurple place-content-center absolute top-[172px] -left-[9px]">
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
@@ -368,17 +370,17 @@
                       <img src="./assets/magic.svg" alt="" srcset="">
                     </div>
                   </div>
-                  <h3 class="mt-3 text-head32 text-black font-bold leading-tight">Transforme seus depoimentos em publicações, com 1 clique!</h3>
+                  <h3 class="mt-3 text-head24 md:text-head32 text-black font-bold leading-tight">Transforme seus depoimentos em publicações, com 1 clique!</h3>
                   <p class="mt-3 text-body18 text-black font-normal">Sabemos como é difícil criar conteúdo, com o <b>Studio Elogiou</b> você transforma seus <b>depoimentos</b> em <b>publicações incríveis</b> para compartilhar nas suas redes!</p>
   
-                  <div class="flex items-center gap-2 mt-8 ">
+                  <a href="#planos" class="flex items-center gap-2 mt-8 ">
                     <p class="font-proximaNova font-semibold text-caption16 text-black">Quero começar</p>
                     <img src="./assets/chevron-right.svg" alt="">
-                 </div>
+                 </a>
                 </div>
             </li>
-            <li  data-item-scroll="04" class="item-scroll pl-[96px] relative mt-[296px]">
-              <div class="w-5 h-5 rounded-full bg-primaryPurple grid place-content-center absolute top-[172px] -left-[9px]">
+            <li  data-item-scroll="04" class="item-scroll md:pl-[96px] relative md:mt-[296px] mt-[64px]">
+              <div class="hidden md:grid w-5 h-5 rounded-full bg-primaryPurple place-content-center absolute top-[172px] -left-[9px]">
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
@@ -389,7 +391,7 @@
                       <img src="./assets/computer-code.svg" alt="" srcset="">
                     </div>
                   </div>
-                  <h3 class="mt-3 text-head32 text-black font-bold leading-tight">Conectamos no seu site ou
+                  <h3 class="mt-3 text-head24 md:text-head32 text-black font-bold leading-tight">Conectamos no seu site ou
                     em sua plataforma preferida</h3>
                   <p class="mt-3 text-body18 text-black font-normal">Copie e Cole um de nossos widgets de <b>mosaico</b> ou <b>carrossel</b> no seu site para exibir seus depoimentos de forma <b>rápida</b> e <b>automática!</b></p>
                   <div class="mt-3">
@@ -439,14 +441,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="flex items-center gap-2 mt-8 ">
+                  <a href="#planos" class="flex items-center gap-2 mt-8 ">
                     <p class="font-proximaNova font-semibold text-caption16 text-black">Quero começar</p>
                     <img src="./assets/chevron-right.svg" alt="">
-                 </div>
+                 </a>
                 </div>
             </li>
-            <li data-item-scroll="05" class="item-scroll pl-[96px] relative mt-[296px] pb-[96px]">
-              <div class="w-5 h-5 rounded-full bg-primaryPurple grid place-content-center absolute top-[172px] -left-[9px]">
+            <li data-item-scroll="05" class="item-scroll md:pl-[96px] relative md:mt-[296px] mt-[64px] pb-[96px]">
+              <div class="hidden md:grid w-5 h-5 rounded-full bg-primaryPurple place-content-center absolute top-[172px] -left-[9px]">
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
@@ -457,13 +459,13 @@
                       <img src="./assets/tag.svg" alt="" srcset="">
                     </div>
                   </div>
-                  <h3 class="mt-3 text-head32 text-black font-bold leading-tight">Dê recompensas para quem te deixar um Feedback!</h3>
+                  <h3 class="mt-3 text-head24 md:text-head32 text-black font-bold leading-tight">Dê recompensas para quem te deixar um Feedback!</h3>
                   <p class="mt-3 text-body18 text-black font-normal">Sabemos que é importante incentivar seus clientes, dessa forma é possível dar <b>cupons de desconto</b> ao final de depoimento recebido!</p>
   
-                  <div class="flex items-center gap-2 mt-8 ">
+                  <a href="#planos" class="flex items-center gap-2 mt-8 ">
                     <p class="font-proximaNova font-semibold text-caption16 text-black">Quero começar</p>
                     <img src="./assets/chevron-right.svg" alt="">
-                 </div>
+                 </a>
                 </div>
             </li>
           </ul>
@@ -475,7 +477,7 @@
     </div>
   </section>
 
-  <section class="w-full bg-white py-[96px]">
+  <section id="widget" class="px-5 lg:px-0 w-full bg-white py-[96px]">
     <div class="container mx-auto w-full">
 
       <div class="w-full flex flex-col items-center">
@@ -483,7 +485,7 @@
           <img src="./assets/customer.svg" alt="" srcset="">
           <span class="font-semibold font-proximaNova text-caption16 ">WIDGETS DE DEPOIMENTOS</span>
         </div>
-        <h2 class="mt-4 max-w-[960px] text-center font-light font-proximaNova text-black text-head48 leading-tight">A <b class="font-semibold">melhor maneira</b> de exibir os depoimentos dos seus clientes em <b class="font-semibold">vídeo, áudio ou texto.</b></h2>
+        <h2 class="mt-4 max-w-[960px] text-center font-light font-proximaNova text-black text-head32 md:text-head48 leading-tight">A <b class="font-semibold">melhor maneira</b> de exibir os depoimentos dos seus clientes em <b class="font-semibold">vídeo, áudio ou texto.</b></h2>
       </div>
 
       <div class="max-w-[352px] mx-auto  w-full flex justify-center items-center rounded-[24px] border border-[#E4E4E4] my-12">
@@ -505,7 +507,7 @@
       </div>
 
       <div class="flex justify-center mt-16 w-full">
-        <a class="py-3 px-4 bg-green rounded-lg flex items-center gap-2 font-proximaNova font-semibold text-caption16 text-white" href="">
+        <a class="hover:-translate-y-2 transition-btn py-3 px-4 bg-green rounded-lg flex items-center gap-2 font-proximaNova font-semibold text-caption16 text-white" href="">
           Começar Agora
           <img src="./assets/arrow-up-right.svg" alt="" srcset="">
         </a>
@@ -514,7 +516,7 @@
     </div>
   </section>
 
-  <section class="w-full bg-[#00CC771A] bg-opacity-10 py-[96px]">
+  <section class="px-5 lg:px-0 w-full bg-[#00CC771A] bg-opacity-10 py-[96px]">
     <div class="container mx-auto w-full">
 
 
@@ -523,13 +525,13 @@
           <img src="./assets/credit-card-green.svg" alt="" srcset="">
           <span class="font-semibold font-proximaNova text-caption16 text-green">MAIS RECEITA</span>
         </div>
-        <h2 class="mt-4 max-w-[694px] text-center font-light font-proximaNova text-black text-head48 leading-tight"><b class="font-semibold">Os dados nunca mentem! <br></b>
+        <h2 class="mt-4 max-w-[694px] text-center font-light font-proximaNova text-black text-head32 md:text-head48 leading-tight"><b class="font-semibold">Os dados nunca mentem! <br></b>
           Use essas estatísticas a seu favor</h2>
       </div>
 
-      <div class="grid grid-cols-4 gap-8 mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
 
-        <div class="bg-white p-6 rounded-3xl shadow-green-grid">
+        <div class="bg-white p-6 rounded-3xl shadow-green-grid hover:-translate-y-1 transition-all ">
           <div class="h-16 w-16 rounded-[40px] bg-green bg-opacity-10 grid place-content-center">
             <img src="./assets/credit-card-green.svg" alt="" srcset="">
           </div>
@@ -537,7 +539,7 @@
           <p class="mt-2 text-body16 font-proximaNova font-normal text-black">que compram online consideram depoimentos <b class="font-semibold text-green">confiáveis.</b></p>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-green-grid">
+        <div class="bg-white p-6 rounded-3xl shadow-green-grid hover:-translate-y-1 transition-all">
           <div class="h-16 w-16 rounded-[40px] bg-green bg-opacity-10 grid place-content-center">
             <img src="./assets/dashboard.svg" alt="" srcset="">
           </div>
@@ -545,7 +547,7 @@
           <p class="mt-2 text-body16 font-proximaNova font-normal text-black">positivas <b class="font-semibold text-green">influenciam</b> os clientes a virarem compradores.</p>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-green-grid">
+        <div class="bg-white p-6 rounded-3xl shadow-green-grid hover:-translate-y-1 transition-all">
           <div class="h-16 w-16 rounded-[40px] bg-green bg-opacity-10 grid place-content-center">
             <img src="./assets/heart.svg" alt="" srcset="">
           </div>
@@ -555,7 +557,7 @@
           </p>
         </div>
 
-        <div class="bg-white p-6 rounded-3xl shadow-green-grid">
+        <div class="bg-white p-6 rounded-3xl shadow-green-grid hover:-translate-y-1 transition-all">
           <div class="h-16 w-16 rounded-[40px] bg-green bg-opacity-10 grid place-content-center">
             <img src="./assets/reload.svg" alt="" srcset="">
           </div>
@@ -566,7 +568,7 @@
       </div>
 
       <div class="flex justify-center mt-16 w-full">
-        <a class="py-3 px-4 bg-green rounded-lg flex items-center gap-2 font-proximaNova font-semibold text-caption16 text-white" href="">
+        <a class="hover:-translate-y-2 transition-btn py-3 px-4 bg-green rounded-lg flex items-center gap-2 font-proximaNova font-semibold text-caption16 text-white" href="">
           Começar Agora
           <img src="./assets/arrow-up-right.svg" alt="" srcset="">
         </a>
@@ -575,8 +577,8 @@
     </div>
   </section>
 
-  <section class="w-full bg-white py-[96px]">
-    <div class="container mx-auto w-full flex items-start justify-between">
+  <section id="duvidas" class="px-5 lg:px-0 w-full bg-white py-[96px]">
+    <div class="container mx-auto w-full flex flex-col md:flex-row items-start justify-between">
 
       <div class="max-w-[352px] w-full flex flex-col items-start">
         <div class="flex items-center gap-2 bg-primaryPurple bg-opacity-10 px-4 py-2 rounded-[32px]">
@@ -607,7 +609,7 @@
               class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
             >
               <p class="text-left font-proximaNova text-black text-body16">
-                A conta gratuita tem período de testes?
+                    A Elogiou vende depoimentos?
               </p>
               <div
                 class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -627,11 +629,7 @@
           </button>
           <div
             class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
-          >
-            É preciso ser aposentado ou pensionista do INSS, servidor público
-            federal ou estadual, ou trabalhar nas forças armadas. Para a
-            contratação, é necessária documentação básica e contracheque.
-            Simples assim
+          >Não, a Elogiou não vende depoimentos ou reviews, os depoimentos devem ser adquiridos de forma autêntica, a Elogiou é uma ferramenta para coletar e gerir depoimentos que você recebe online ou offline.
           </div>
         </div>
 
@@ -647,8 +645,7 @@
             <div
               class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
             >
-              <p class="text-left font-proximaNova text-black text-body16">
-                Quantos murais eu posso ter?
+              <p class="text-left font-proximaNova text-black text-body16">Como funciona?
               </p>
               <div
                 class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -668,11 +665,7 @@
           </button>
           <div
             class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
-          >
-            É preciso ser aposentado ou pensionista do INSS, servidor público
-            federal ou estadual, ou trabalhar nas forças armadas. Para a
-            contratação, é necessária documentação básica e contracheque.
-            Simples assim
+          >Que bom que você perguntou! Temos um mídia kit que você pode <a class="text-primaryPurple underline" href="https://elogiou.com.br/storage/sys/apresentacao.pdf" target="_blank" >Baixar aqui</a>
           </div>
         </div>
 
@@ -689,7 +682,7 @@
               class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
             >
               <p class="text-left font-proximaNova text-black text-body16">
-                Quantos elogios eu posso coletar?
+A conta gratuita tem período de testes?
               </p>
               <div
                 class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -709,11 +702,7 @@
           </button>
           <div
             class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
-          >
-            É preciso ser aposentado ou pensionista do INSS, servidor público
-            federal ou estadual, ou trabalhar nas forças armadas. Para a
-            contratação, é necessária documentação básica e contracheque.
-            Simples assim
+          >Não, nós não temos período de testes na Elogiou, na conta gratuita você poderá testar nossa plataforma normalmente, criação de formulário e coleta de depoimentos por redes sociais, porém, haverá limitadores para a conta grátis. <a target="_blank" class="text-primaryPurple underline" href="https://elogiou.com.br/planos-e-precos">Consultar limites</a>
           </div>
         </div>
 
@@ -729,8 +718,7 @@
             <div
               class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
             >
-              <p class="text-left font-proximaNova text-black text-body16">
-                É possível divulgar meu mural para meus clientes?
+              <p class="text-left font-proximaNova text-black text-body16">Quantos murais eu posso ter?
               </p>
               <div
                 class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -751,10 +739,8 @@
           <div
             class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
           >
-            É preciso ser aposentado ou pensionista do INSS, servidor público
-            federal ou estadual, ou trabalhar nas forças armadas. Para a
-            contratação, é necessária documentação básica e contracheque.
-            Simples assim
+            
+Confira todos os detalhes dos planos da Elogiou neste <a target="_blank" class="text-primaryPurple underline" href="https://elogiou.com.br/planos-e-precos">link</a>
           </div>
         </div>
 
@@ -771,7 +757,7 @@
               class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
             >
               <p class="text-left font-proximaNova text-black text-body16">
-                Consigo colocar um carrossel de depoimentos em meu site?
+                Quantos elogios eu posso captar?
               </p>
               <div
                 class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -791,11 +777,7 @@
           </button>
           <div
             class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
-          >
-            É preciso ser aposentado ou pensionista do INSS, servidor público
-            federal ou estadual, ou trabalhar nas forças armadas. Para a
-            contratação, é necessária documentação básica e contracheque.
-            Simples assim
+          >Cada plano possui limites específicos e você pode consulta-lós e comprara-lós <a class="text-primaryPurple underline" href="https://elogiou.com.br/planos-e-precos">aqui</a>. Agora no plano personalizado nós construímos algo para a sua necessidade.
           </div>
         </div>
 
@@ -812,7 +794,7 @@
             class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
           >
             <p class="text-left font-proximaNova text-black text-body16">
-              Preciso entender de programação para usar a Elogiou?
+              É possível divulgar meu mural para meus clientes?
             </p>
             <div
               class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -832,11 +814,7 @@
         </button>
         <div
           class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
-        >
-          É preciso ser aposentado ou pensionista do INSS, servidor público
-          federal ou estadual, ou trabalhar nas forças armadas. Para a
-          contratação, é necessária documentação básica e contracheque.
-          Simples assim
+        >Sim, nós temos 3 formas de divulgação, são elas: Link exclusivo, a própria plataforma gera um link que leva diretamente para seu mural atualizado, também temos o modo Carrossel e Mosaico com integração via código. Gere um código através de 2 cliques no seu painel Elogiou e envie este código ao responsável pela criação do seu site. Após a publicação do código, seu mural estará visível em seu site.
         </div>
       </div>
 
@@ -853,7 +831,7 @@
             class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
           >
             <p class="text-left font-proximaNova text-black text-body16">
-              Posso cancelar minha assinatura quando quiser?
+              Consigo colocar um carousel de elogios em meu site?
             </p>
             <div
               class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -874,10 +852,8 @@
         <div
           class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
         >
-          É preciso ser aposentado ou pensionista do INSS, servidor público
-          federal ou estadual, ou trabalhar nas forças armadas. Para a
-          contratação, é necessária documentação básica e contracheque.
-          Simples assim
+          
+Sim, o carousel deverá ser inserido pelo webdesigner responsável pela criação do seu site, pelo menu do painel Elogiou acesse: <span class="text-primaryPurple">Publicar Mural > Adicionar no meu site > Copiar Código</span>. Com apenas 3 cliques seu código estará disponível e seu mural publicado.
         </div>
       </div>
 
@@ -894,7 +870,7 @@
             class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
           >
             <p class="text-left font-proximaNova text-black text-body16">
-              Posso excluir minha conta em algum momento?
+Preciso entender de programação para usar a Elogiou?
             </p>
             <div
               class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
@@ -915,19 +891,90 @@
         <div
           class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
         >
-          É preciso ser aposentado ou pensionista do INSS, servidor público
-          federal ou estadual, ou trabalhar nas forças armadas. Para a
-          contratação, é necessária documentação básica e contracheque.
-          Simples assim
+          
+Não, 99% das funcionalidades da Elogiou você realiza pela plataforma sem ajuda de qualquer outro profissional, captação de elogios e depoimentos, criação do formulário, gerenciar assinaturas, tão simples que até a sua vó consegue usar. Somente a implementação do Carrossel e do Mosaico será preciso alguém que tenha acesso aos códigos do seu site para implementá-los.
         </div>
       </div>
+      <div
+      class="accordion-item w-fullcursor-pointer transition-all border-b-[1px] border-primaryPurple border-opacity-10"
+    >
+      <button class="h-[72px] w-full flex items-center">
+        <div
+          class="pointer-events-none w-[72px] flex justify-center items-center font-proximaNova font-semibold text-body16 text-primaryPurple"
+        >
+          09.
+        </div>
+        <div
+          class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
+        >
+          <p class="text-left font-proximaNova text-black text-body16">
+            Posso cancelar minha assinatura quando quiser?
+          </p>
+          <div
+            class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
+          >
+            <img
+              class="accordion-icon-plus"
+              src="./assets/plus-icon.svg"
+              alt=""
+            />
+            <img
+              class="accordion-icon-less"
+              src="./assets/less-icon.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </button>
+      <div
+        class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
+      >
+      Claro! Ao lado superior direito acesse <span class="text-primaryPurple ">Minha Conta > Meu Plano > Cancelar assinatura</span>
+      </div>
+    </div>
+    <div
+    class="accordion-item w-fullcursor-pointer transition-all border-b-[1px] border-primaryPurple border-opacity-10"
+  >
+    <button class="h-[72px] w-full flex items-center">
+      <div
+        class="pointer-events-none w-[72px] flex justify-center items-center font-proximaNova font-semibold text-body16 text-primaryPurple"
+      >
+        10.
+      </div>
+      <div
+        class="accordion-head-info pointer-events-none h-full flex items-center justify-between flex-1"
+      >
+        <p class="text-left font-proximaNova text-black text-body16">
+          Posso excluir minha conta em algum momento?
+        </p>
+        <div
+          class="flex-shrink-0 accordion-icon w-[40px] h-[40px] rounded-full  flex justify-center items-center"
+        >
+          <img
+            class="accordion-icon-plus"
+            src="./assets/plus-icon.svg"
+            alt=""
+          />
+          <img
+            class="accordion-icon-less"
+            src="./assets/less-icon.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </button>
+    <div
+      class="accordion-text px-6 text-body16 text-black font-normal font-proximaNova leading-[150%]"
+    >Sim é muito simples, ao lado superior direito acesse <span class="text-primaryPurple">Minha Conta > Excluir minha conta.</span>
+    </div>
+  </div>
 
       </div> 
 
     </div>
   </section>
 
-  <section class="rounded-[32px] bg-primaryPurple py-[124px]">
+  <section class="px-5 md:px-0 rounded-[32px] bg-primaryPurple py-[124px]">
     <div class="container mx-auto w-full ">
 
       <div class="w-full flex flex-col items-center">
@@ -935,12 +982,12 @@
           <img src="./assets/crown-white.svg" alt="" srcset="">
           <span class="font-semibold font-proximaNova text-caption16 text-white">JUNTE-SE A NÓS</span>
         </div>
-        <h2 class="mt-4 max-w-[960px] text-center font-light font-proximaNova text-head48 leading-tight text-white">Tudo o que você precisa para fazer sua empresa crescer, <b class="font-semibold">a um clique de distância</b></h2>
+        <h2 class="mt-4 max-w-[960px] text-center font-light font-proximaNova text-head32 md:text-head48 leading-tight text-white">Tudo o que você precisa para fazer sua empresa crescer, <b class="font-semibold">a um clique de distância</b></h2>
         <p class="text-body16 font-proximaNova mt-4 text-center text-white">7 dias de garantia de satisfação ou seu <b class="font-semibold">dinheiro de volta!</b></p>
       </div>
 
-      <div class="grid grid-cols-3 gap-8 mt-[80px]">
-        <div class="flex flex-col items-center max-w-[352px]">
+      <div class="grid md:grid-cols-3 grid-cols-1 justify-center gap-16 lg:gap-8 mt-[80px]">
+        <div class="hover:-translate-y-2 transition-all flex flex-col items-center md:max-w-[352px]">
           <div class="h-[574px] w-full flex flex-col items-center bg-card bg-opacity-20 rounded-lg py-10 px-12">
 
             <div>
@@ -956,8 +1003,8 @@
               <span class="font-proximaNova text-sm14 font-normal text-white absolute -bottom-2 -right-6">/mês</span>
             </div>
   
-            <a class="w-full rounded-lg py-3 bg-primaryPurple mt-8 text-center font-proximaNova font-semibold text-white text-button18
-            " href="">Começar Agora</a>
+            <a class="hover:-translate-y-2 transition-btn w-full rounded-lg py-3 bg-primaryPurple mt-8 text-center font-proximaNova font-semibold text-white text-button18
+            " target="_blank" href="LINK-DO-MENSAL">Começar Agora</a>
   
             <p class="mt-4 font-proximaNova font-normal text-white text-body14 text-center">Perfeito para quem quer mais opções <br> de personalização e elogios</p>
   
@@ -998,7 +1045,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-col items-center max-w-[352px]">
+        <div class="hover:-translate-y-2 transition-all flex flex-col items-center md:max-w-[352px]">
           <div class="relative border-2 border-green h-[574px] w-full flex flex-col items-center bg-card bg-opacity-20 rounded-lg  px-12">
 
             <p class="bg-green font-proximaNova font-bold text-caption18 text-center px-4 py-1 rounded-[35px] text-white top-[-20px] absolute">Mais Vendido</p>
@@ -1016,8 +1063,8 @@
               <span class="font-proximaNova text-sm14 font-normal text-white absolute -bottom-2 -right-6">/semestre</span>
             </div>
   
-            <a class="w-full rounded-lg py-3 bg-green mt-8 text-center font-proximaNova font-semibold text-white text-button18
-            " href="">Começar Agora</a>
+            <a class="hover:-translate-y-2 transition-btn w-full rounded-lg py-3 bg-green mt-8 text-center font-proximaNova font-semibold text-white text-button18
+            " target="_blank" href="LINK-DO-SEMESTRAL">Começar Agora</a>
   
             <p class="mt-4 font-proximaNova font-normal text-white text-body14 text-center">Perfeito para quem quer mais opções <br> de personalização e elogios</p>
   
@@ -1059,7 +1106,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex flex-col items-center max-w-[352px]">
+        <div class="hover:-translate-y-2 transition-all flex flex-col items-center md:max-w-[352px]">
           <div class="relative h-[574px] w-full flex flex-col items-center bg-card bg-opacity-20 rounded-lg  px-12">
 
             <p class="bg-[#FBBE28] text-black font-proximaNova font-bold text-caption18 text-center px-4 py-1 
@@ -1078,8 +1125,8 @@
               <span class="font-proximaNova text-sm14 font-normal text-white absolute -bottom-2 -right-6">/ano</span>
             </div>
   
-            <a class="w-full rounded-lg py-3 bg-primaryPurple mt-8 text-center font-proximaNova font-semibold text-white text-button18
-            " href="">Começar Agora</a>
+            <a class="hover:-translate-y-2 transition-btn w-full rounded-lg py-3 bg-primaryPurple mt-8 text-center font-proximaNova font-semibold text-white text-button18
+            " target="_blank" href="LINK-DO-ANUAL">Começar Agora</a>
   
             <p class="mt-4 font-proximaNova font-normal text-white text-body14 text-center">Perfeito para quem quer mais opções <br> de personalização e elogios</p>
   
@@ -1126,10 +1173,10 @@
   </section>
 
   <footer>
-    <div class="container mx-auto w-full">
+    <div class="px-5 lg:px-0 container mx-auto w-full">
 
 
-      <div class="flex items-start justify-between py-[112px]">
+      <div class="flex flex-col md:flex-row items-start justify-between py-[112px]">
 
           <div class="max-w-[384px] w-full"> 
 
@@ -1148,18 +1195,18 @@
             </p>
 
           </div>
-          <div class="w-full flex items-start justify-between ">
+          <div class="w-full flex flex-col md:flex-row items-start justify-between gap-8 lg:gap-0 mt-12 md:mt-0">
             <div>
               <strong>Produtos</strong>
               <ul class="flex flex-col mt-6 gap-4">
                 <li>
-                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="">Formulário de captação</a>
+                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="#captacao">Formulário de captação</a>
                 </li>
                 <li>
-                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="">Nossos widget 🥰</a>
+                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="#widget">Nossos widget 🥰</a>
                 </li>
                 <li>
-                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="">Seja um afiliado</a>
+                  <a class="font-proximaNova font-normal text-body16 text-grayDark" href="#planos">Seja um afiliado</a>
                 </li>
               </ul>
             </div>
@@ -1167,7 +1214,7 @@
               <strong>A Elogiou</strong>
               <ul class="flex flex-col mt-6 gap-4">
                 <li>
-                  <a class="flex items-center gap-2 font-proximaNova font-normal text-body16 text-green" href="">
+                  <a target="_blank" class="flex items-center gap-2 font-proximaNova font-normal text-body16 text-green" href="www.elogiou.com.br/logar">
                     <u>Painel do Cliente</u>
                     <img src="./assets/arrow-up-right-green.svg" alt="" srcset="">
                   </a>
@@ -1207,7 +1254,7 @@
       </div>
 
 
-      <div class="flex items-center justify-between pt-6 pb-8 border-t border-[#E4E4E4]">
+      <div class="flex flex-col md:flex-row items-center justify-between pt-6 pb-8 border-t border-[#E4E4E4]">
         <p class="font-proximaNova font-normal text-body16 text-grayDark">2023 © Elogiou - Todos os direitos reservados. 🇧🇷</p>
         <div class="flex items-center gap-8">
          
