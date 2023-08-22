@@ -105,6 +105,7 @@ body {
   animation-name: result_box_appearance;
   max-height: 320px;
   overflow: visible;
+  margin-bottom: 32px;
 }
 
 @keyframes result_box_appearance {
@@ -259,10 +260,18 @@ body {
   transition-duration: 300ms;
 }
 
-.bg-header-fixed {
-  background-color: #4824F9;
+#header {
+  transition: all 0.25s ease;
 }
 
+.bg-header-fixed {
+  background-color: #FFFFFF;
+  height: 52px !important;
+}
+
+.bg-header-fixed > div > #header-navbar > ul > li > a {
+  color: #131212;
+}
 
 
 .show-navbar-header {
@@ -271,6 +280,15 @@ body {
     transition: 0.5s !important;
   }
 }
+
+.call-btn-fixed {
+  background-color: #00CC77;
+}
+
+.call-btn-fixed > P {
+  color: #fff;
+}
+
 
 .show-navbar {
   @media (max-width: 768px) {
@@ -312,3 +330,4 @@ b {
     transform: translateY(0%);
    } 
 }
+

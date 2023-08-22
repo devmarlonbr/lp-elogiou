@@ -863,6 +863,10 @@ video {
   width: max-content;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
 .max-w-\[105px\] {
   max-width: 105px;
 }
@@ -873,6 +877,10 @@ video {
 
 .max-w-\[176px\] {
   max-width: 176px;
+}
+
+.max-w-\[180px\] {
+  max-width: 180px;
 }
 
 .max-w-\[256px\] {
@@ -893,6 +901,10 @@ video {
 
 .max-w-\[480px\] {
   max-width: 480px;
+}
+
+.max-w-\[560px\] {
+  max-width: 560px;
 }
 
 .max-w-\[577px\] {
@@ -1276,16 +1288,12 @@ video {
   padding-top: 1.5rem;
 }
 
-.pt-\[124px\] {
-  padding-top: 124px;
-}
-
-.pt-\[76px\] {
-  padding-top: 76px;
-}
-
 .pt-\[120px\] {
   padding-top: 120px;
+}
+
+.pt-\[124px\] {
+  padding-top: 124px;
 }
 
 .text-left {
@@ -1367,6 +1375,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-body20 {
+  font-size: 1.25rem;
 }
 
 .font-bold {
@@ -1572,6 +1584,7 @@ body {
   animation-name: result_box_appearance;
   max-height: 320px;
   overflow: visible;
+  margin-bottom: 32px;
 }
 
 @keyframes result_box_appearance {
@@ -1731,8 +1744,17 @@ body {
   transition-duration: 300ms;
 }
 
+#header {
+  transition: all 0.25s ease;
+}
+
 .bg-header-fixed {
-  background-color: #4824F9;
+  background-color: #FFFFFF;
+  height: 52px !important;
+}
+
+.bg-header-fixed > div > #header-navbar > ul > li > a {
+  color: #131212;
 }
 
 .show-navbar-header {
@@ -1741,6 +1763,14 @@ body {
 
     transition: 0.5s !important;
   }
+}
+
+.call-btn-fixed {
+  background-color: #00CC77;
+}
+
+.call-btn-fixed > P {
+  color: #fff;
 }
 
 .show-navbar {
@@ -1945,3 +1975,4 @@ b {
     padding-right: 0px;
   }
 }
+

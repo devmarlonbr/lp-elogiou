@@ -133,6 +133,7 @@ const observerWeb = new IntersectionObserver((entries) => {
 const header = document.querySelector("#header");
 const headernavbar = document.querySelector("#header-navbar");
 const buttonnavbar = document.querySelector("#button-navbar");
+const callButton = document.querySelector("#call-button");
 
 buttonnavbar.addEventListener("click", (e) => {
   let isActive = headernavbar.classList.contains("show-navbar")
@@ -151,10 +152,28 @@ window.onscroll = function () {
   handleScroll();
 };
 
+
+
 const handleScroll = () => {
   if (window.pageYOffset > 90) {
     header.classList.add("bg-header-fixed");
+    headernavbar.style.backgroundColor = "#FFFFFF"
+    buttonnavbar.children[0].children[0].style.stroke = "#282828"
+    buttonnavbar.children[0].children[1].style.stroke = "#282828"
+    buttonnavbar.children[0].children[2].style.stroke = "#282828"
+    document.querySelector("#logo").children[0].children[0].style.fill = "#282828"
+    callButton.classList.add("call-btn-fixed")
+    callButton.children[1].children[0].style.fill  = "#ffffff"
+
   } else {
     header.classList.remove("bg-header-fixed");
+    headernavbar.style.backgroundColor = "#4824F9"
+    buttonnavbar.children[0].children[0].style.stroke = "#ffffff"
+    buttonnavbar.children[0].children[1].style.stroke = "#ffffff"
+    buttonnavbar.children[0].children[2].style.stroke = "#ffffff"
+    document.querySelector("#logo").children[0].children[0].style.fill = "#ffffff"
+    callButton.classList.remove("call-btn-fixed")
+    callButton.children[1].children[0].style.fill  = "#4824F9"
+
   }
 };
