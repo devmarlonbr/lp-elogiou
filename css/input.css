@@ -275,7 +275,7 @@ body {
 .show-navbar {
   @media (max-width: 768px) {
     position: fixed;
-    top: 72px;
+    bottom: 0px;
     display: flex !important;
     flex-direction: column;
     padding: 32px 20px;
@@ -283,6 +283,8 @@ body {
     background-color: #4824F9;
     gap: 64px;
     transition: 0.5s !important;
+    transform: translateY(0%);
+    animation: navbar-entrance 0.5s ease;
   }
 }
 
@@ -299,4 +301,14 @@ b {
 
 .h-screen-hero {
   height: calc(100vh - 76px);
+}
+@keyframes navbar-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+   100% {
+    opacity: 1;
+    transform: translateY(0%);
+   } 
 }
