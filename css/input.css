@@ -292,3 +292,11 @@ body {
   }
 }
 
+b {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+}
+
+.h-screen-hero {
+  height: calc(100vh - 76px);
+}
