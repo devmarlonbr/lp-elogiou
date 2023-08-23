@@ -306,6 +306,12 @@ body {
   }
 }
 
+.backgroundColorNavbar {
+  @media (max-width: 768px) {
+    background-color: #fff;
+  }
+}
+
 .show-navbar > ul {
   @media (max-width: 768px) {
     flex-direction: column;
