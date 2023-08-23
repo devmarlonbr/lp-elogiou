@@ -30,6 +30,17 @@
 </head>
 <body >
 
+  <div id="video-container" class="z-[999999999] transition-all opacity-0 pointer-events-none w-full h-screen fixed top-0 right-0 left-0 bottom-0 bg-black bg-opacity-70">
+    <div class="max-w-[1120px] px-5 mx-auto lg:px-0 relative flex flex-col items-center justify-center w-full h-full">
+
+      <button id="close-modal" class="self-end mb-4">
+        <img src="./assets/close.svg" alt="" srcset="">
+      </button>
+
+      <iframe  class="rounded-3xl h-[320px] md:h-[632px]" width="100%"  src="https://www.youtube.com/embed/AmctTJOMyyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <header id="header" class="px-5 lg:px-0 fixed top-0 z-50 bg-primaryPurple w-full md:h-[76px]">
     <div class="h-full container mx-auto flex flex-col md:flex-row items-center justify-between relative">
       <div class="h-[76px] md:h-auto flex items-center justify-between md:max-w-[119px]  w-full ">
@@ -101,10 +112,10 @@
             <img src="./assets/arrow-up-right.svg" alt="" srcset="">
           </a>
   
-          <a href="https://www.youtube.com/watch?v=AmctTJOMyyQ" target="_blank" class="md:max-w-[180px] w-full cursor-pointer hover:-translate-y-2 transition-btn w-fuil bg-white px-4 py-[10px] rounded-[6px] flex  justify-center items-center gap-2">
+          <button id="open-modal" href="https://www.youtube.com/watch?v=AmctTJOMyyQ" target="_blank" class="md:max-w-[180px] w-full cursor-pointer hover:-translate-y-2 transition-btn w-fuil bg-white px-4 py-[10px] rounded-[6px] flex  justify-center items-center gap-2">
             <p class="text-button16 font-proximaNova font-semibold text-primaryPurple">Ver vídeo <span class="text-sm12">(3min)</span></p>
             <img src="./assets/youtube.svg" alt="" srcset="">
-          </a>
+          </button>
         </div>
   
         <div class="flex items-center flex-wrap justify-center gap-8 mt-12 md:mt-5">
@@ -294,6 +305,11 @@
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
               </div> 
+
+              <div class="md:hidden" >
+                <img src="./assets/item-01.png" alt="" srcset="">
+              </div>
+
                 <div class="timeline-item max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
                     <div class="h-[54px] w-[54px] rounded-full bg-[#EAE5FF] border-2 border-white grid place-content-center">
@@ -304,7 +320,7 @@
                   <p class="mt-3 text-body18 text-black font-light font-proximaNova">Criamos uma solução incrível que te faz <strong class="font-bold">ganhar tempo</strong> e aumenta <strong class="font-bold">credibilidade</strong> do seu negócio. </p>
                   <div class="mt-3">
                     <span class="font-proximaNova font-semibold text-sm14 text-black uppercase">Integrações</span>
-                    <div class="max-w-[436px] w-full grid grid-cols-10 gap-1 mt-3">
+                    <div class="md:max-w-[436px] w-full grid grid-cols-10 gap-1 mt-3">
                       <div class="h-10 w-10 rounded-lg border border-[#E4E4E4] grid place-content-center">
                         <img src="./assets/list.svg" alt="" srcset="">
                       </div>
@@ -373,6 +389,9 @@
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
               </div>
+              <div class="md:hidden" >
+                <img src="./assets/item-02.png" alt="" srcset="">
+              </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
                     <div class="h-[54px] w-[54px] rounded-full bg-[#EAE5FF] border-2 border-white grid place-content-center">
@@ -392,6 +411,9 @@
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
+              </div>
+              <div class="md:hidden" >
+                <img src="./assets/item-03.png" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -413,6 +435,9 @@
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
+              </div>
+              <div class="md:hidden" >
+                <img src="./assets/item-04.png" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -481,6 +506,9 @@
                 <div class="h-4 w-4 rounded-full bg-white grid place-content-center">
                   <div class="w-3 h-3 rounded-full bg-primaryPurple"></div>
                 </div>
+              </div>
+              <div class="md:hidden" >
+                <img src="./assets/item-05.png" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">

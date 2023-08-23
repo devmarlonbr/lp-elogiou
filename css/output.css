@@ -600,8 +600,16 @@ video {
   right: -1.5rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .bottom-\[220px\] {
   bottom: 220px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .left-\[160px\] {
@@ -610,6 +618,10 @@ video {
 
 .left-\[60px\] {
   left: 60px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .right-\[120px\] {
@@ -656,6 +668,10 @@ video {
   z-index: 50;
 }
 
+.z-\[999999999\] {
+  z-index: 999999999;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -680,6 +696,10 @@ video {
 
 .-mt-\[160px\] {
   margin-top: -160px;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mb-\[-15px\] {
@@ -810,6 +830,26 @@ video {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[320px\] {
+  height: 320px;
+}
+
+.h-\[280px\] {
+  height: 280px;
+}
+
+.h-\[300px\] {
+  height: 300px;
+}
+
+.h-\[290px\] {
+  height: 290px;
+}
+
 .max-h-\[72px\] {
   max-height: 72px;
 }
@@ -865,6 +905,10 @@ video {
 
 .max-w-\[105px\] {
   max-width: 105px;
+}
+
+.max-w-\[1120px\] {
+  max-width: 1120px;
 }
 
 .max-w-\[172px\] {
@@ -1016,6 +1060,10 @@ video {
   gap: 2rem;
 }
 
+.self-end {
+  align-self: flex-end;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1137,6 +1185,11 @@ video {
   background-color: rgb(255 249 236 / var(--tw-bg-opacity));
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 18 18 / var(--tw-bg-opacity));
+}
+
 .bg-card {
   --tw-bg-opacity: 1;
   background-color: rgb(40 40 40 / var(--tw-bg-opacity));
@@ -1172,6 +1225,10 @@ video {
 
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .p-6 {
@@ -1814,6 +1871,11 @@ b {
   }
 }
 
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1883,6 +1945,10 @@ b {
     height: auto;
   }
 
+  .md\:h-\[632px\] {
+    height: 632px;
+  }
+
   .md\:w-auto {
     width: auto;
   }
@@ -1901,6 +1967,10 @@ b {
 
   .md\:max-w-\[560px\] {
     max-width: 560px;
+  }
+
+  .md\:max-w-\[436px\] {
+    max-width: 436px;
   }
 
   .md\:grid-cols-2 {
@@ -1975,4 +2045,3 @@ b {
     padding-right: 0px;
   }
 }
-

@@ -175,3 +175,22 @@ const handleScroll = () => {
 
   }
 };
+
+const openModal = document.querySelector("#open-modal")
+const closeModal = document.querySelector("#close-modal")
+const videoContainer = document.querySelector("#video-container")
+
+
+openModal.addEventListener("click", () => {
+  videoContainer.classList.add("modal-active")
+})
+closeModal.addEventListener("click", () => {
+  videoContainer.classList.remove("modal-active")
+})
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+    videoContainer.classList.remove("modal-active")
+  }
+};
