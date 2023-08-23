@@ -863,10 +863,6 @@ video {
   width: max-content;
 }
 
-.w-2 {
-  width: 0.5rem;
-}
-
 .max-w-\[105px\] {
   max-width: 105px;
 }
@@ -877,10 +873,6 @@ video {
 
 .max-w-\[176px\] {
   max-width: 176px;
-}
-
-.max-w-\[180px\] {
-  max-width: 180px;
 }
 
 .max-w-\[256px\] {
@@ -895,16 +887,16 @@ video {
   max-width: 384px;
 }
 
-.max-w-\[440px\] {
-  max-width: 440px;
+.max-w-\[412px\] {
+  max-width: 412px;
+}
+
+.max-w-\[436px\] {
+  max-width: 436px;
 }
 
 .max-w-\[480px\] {
   max-width: 480px;
-}
-
-.max-w-\[560px\] {
-  max-width: 560px;
 }
 
 .max-w-\[577px\] {
@@ -933,14 +925,6 @@ video {
 
 .max-w-\[960px\] {
   max-width: 960px;
-}
-
-.max-w-\[412px\] {
-  max-width: 412px;
-}
-
-.max-w-\[436px\] {
-  max-width: 436px;
 }
 
 .flex-1 {
@@ -1128,10 +1112,6 @@ video {
   background-color: #00CC771A;
 }
 
-.bg-\[\#8A74FB1A\] {
-  background-color: #8A74FB1A;
-}
-
 .bg-\[\#9CFED4\] {
   --tw-bg-opacity: 1;
   background-color: rgb(156 254 212 / var(--tw-bg-opacity));
@@ -1172,9 +1152,9 @@ video {
   background-color: rgb(72 36 249 / var(--tw-bg-opacity));
 }
 
-.bg-purpleLight {
+.bg-primaryPurpleDark {
   --tw-bg-opacity: 1;
-  background-color: rgb(138 116 251 / var(--tw-bg-opacity));
+  background-color: rgb(72 36 249 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1184,16 +1164,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-primaryPurpleDark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(72 36 249 / var(--tw-bg-opacity));
-}
-
-.bg-red {
-  --tw-bg-opacity: 1;
-  background-color: rgb(231 76 60 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-10 {
@@ -1350,6 +1320,10 @@ video {
   font-size: 1.125rem;
 }
 
+.text-body20 {
+  font-size: 1.25rem;
+}
+
 .text-button16 {
   font-size: 1rem;
 }
@@ -1393,10 +1367,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-body20 {
-  font-size: 1.25rem;
 }
 
 .font-bold {
@@ -1921,16 +1891,16 @@ b {
     max-width: 119px;
   }
 
+  .md\:max-w-\[180px\] {
+    max-width: 180px;
+  }
+
   .md\:max-w-\[352px\] {
     max-width: 352px;
   }
 
   .md\:max-w-\[560px\] {
     max-width: 560px;
-  }
-
-  .md\:max-w-\[180px\] {
-    max-width: 180px;
   }
 
   .md\:grid-cols-2 {

@@ -1,11 +1,12 @@
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
+
+    console.log(entry.intersectionRatio)
+
     if (entry.isIntersecting) {
-      
       images.forEach(image => {
         image.classList.remove("active")
       })
-      
       switch (entry.target.dataset.itemScroll) {
         case "01":
           timelineTrack.style.height = "0%"
@@ -29,13 +30,13 @@ const observer = new IntersectionObserver((entries) => {
            break;
         default:
           break;
-      }
+    }
 
     } else {
       return
     }
   });
-});
+}, { threshold: 1, rootMargin: "-32px" });
 
 const timelineTrack = document.querySelector(".timeline-track")
 const elements = document.querySelectorAll(".item-scroll");
@@ -81,8 +82,6 @@ const accordion = document.querySelectorAll(".accordion-item");
 const accordionVisibleClass = "accordion-active";
 
 const accordionHandleClick = (e) => {
-  console.log(e.target);
-  console.log(e.target.parentNode.classList);
 
   const alreadyHasActive = e.target.parentNode.classList.contains(
     accordionVisibleClass
@@ -99,7 +98,6 @@ const accordionHandleClick = (e) => {
 };
 
 accordion.forEach((accItem) => {
-  console.log(accItem);
   accItem.addEventListener("click", accordionHandleClick);
 });
 
