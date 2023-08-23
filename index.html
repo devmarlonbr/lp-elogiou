@@ -261,23 +261,23 @@
         <div class="hidden md:block max-w-[480px] w-full h-[440px] sticky top-[18rem] ">
 
           <div class="image-scroll image-01 active hidden opacity-0">
-            <img src="./assets/item-01.png" alt="" srcset="">
+            <img src="./assets/item-01.webp" alt="" srcset="">
           </div>
 
           <div class="image-scroll image-02 hidden opacity-0">
-            <img src="./assets/item-02.png" alt="" srcset="">
+            <img src="./assets/item-02.webp" alt="" srcset="">
           </div>
 
           <div class="image-scroll image-03 hidden opacity-0">
-            <img src="./assets/item-03.png" alt="" srcset="">
+            <img src="./assets/item-03.webp" alt="" srcset="">
           </div>
 
           <div class="image-scroll image-04 hidden opacity-0">
-            <img src="./assets/item-04.png" alt="" srcset="">
+            <img src="./assets/item-04.webp" alt="" srcset="">
           </div>
 
           <div class="image-scroll image-05 hidden opacity-0">
-            <img src="./assets/item-05.png" alt="" srcset="">
+            <img src="./assets/item-05.webp" alt="" srcset="">
           </div>
 
 
@@ -307,7 +307,7 @@
               </div> 
 
               <div class="md:hidden" >
-                <img src="./assets/item-01.png" alt="" srcset="">
+                <img src="./assets/item-01.webp" alt="" srcset="">
               </div>
 
                 <div class="timeline-item max-w-[480px] w-full ">
@@ -391,7 +391,7 @@
                 </div>
               </div>
               <div class="md:hidden" >
-                <img src="./assets/item-02.png" alt="" srcset="">
+                <img src="./assets/item-02.webp" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -414,7 +414,7 @@
                 </div>
               </div>
               <div class="md:hidden" >
-                <img src="./assets/item-03.png" alt="" srcset="">
+                <img src="./assets/item-03.webp" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -438,7 +438,7 @@
                 </div>
               </div>
               <div class="md:hidden" >
-                <img src="./assets/item-04.png" alt="" srcset="">
+                <img src="./assets/item-04.webp" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -510,7 +510,7 @@
                 </div>
               </div>
               <div class="md:hidden" >
-                <img src="./assets/item-05.png" alt="" srcset="">
+                <img src="./assets/item-05.webp" alt="" srcset="">
               </div>
                <div class="max-w-[480px] w-full ">
                   <div class="h-[64px] w-[64px] rounded-full bg-[#EAE5FF] grid place-content-center">
@@ -1294,7 +1294,9 @@ Não, 99% das funcionalidades da Elogiou você realiza pela plataforma sem ajuda
     </div>
   </footer>
 
-  <script src="./script/index.js"></script>
+  <script>
+    const observer=new IntersectionObserver((e=>{e.forEach((e=>{if(console.log(e.intersectionRatio),e.isIntersecting)switch(images.forEach((e=>{e.classList.remove("active")})),e.target.dataset.itemScroll){case"01":timelineTrack.style.height="0%",document.querySelector(".image-01").classList.add("active");break;case"02":timelineTrack.style.height="32%",document.querySelector(".image-02").classList.add("active");break;case"03":timelineTrack.style.height="52%",document.querySelector(".image-03").classList.add("active");break;case"04":timelineTrack.style.height="74%",document.querySelector(".image-04").classList.add("active");break;case"05":timelineTrack.style.height="100%",document.querySelector(".image-05").classList.add("active")}}))}),{threshold:1,rootMargin:"-32px"}),timelineTrack=document.querySelector(".timeline-track"),elements=document.querySelectorAll(".item-scroll"),images=document.querySelectorAll(".image-scroll");elements.forEach((e=>observer.observe(e)));let toggleActive="01";function handleButtonToggleActive(e,t){buttonToggle.forEach((e=>{e.classList.remove("toggle-active")})),e.target.classList.add("toggle-active"),"01"===t?(mosaico.classList.add("container-toggle-active"),carrosel.classList.remove("container-toggle-active")):(carrosel.classList.add("container-toggle-active"),mosaico.classList.remove("container-toggle-active"))}const buttonToggle=document.querySelectorAll(".button-toggle"),containerToggle=document.querySelector(".container-toggle"),mosaico=document.querySelector(".mosaico"),carrosel=document.querySelector(".carrosel");buttonToggle.forEach((e=>{e.addEventListener("click",(e=>{handleButtonToggleActive(e,e.target.dataset.buttonToggle)}))}));const accordion=document.querySelectorAll(".accordion-item"),accordionVisibleClass="accordion-active",accordionHandleClick=e=>{e.target.parentNode.classList.contains("accordion-active")?e.target.parentNode.classList.remove("accordion-active"):(accordion.forEach((e=>{e.classList.remove("accordion-active")})),e.target.parentNode.classList.add("accordion-active"))};accordion.forEach((e=>{e.addEventListener("click",accordionHandleClick)}));const rotate01=document.querySelector("#rotate-01"),rotate02=document.querySelector("#rotate-02");let pageOffset=0;window.addEventListener("scroll",(e=>{let t=window.pageYOffset/120;rotate02.style.transform=`translateX(${t}%)`,rotate01.style.transform=`translateX(-${t}%)`}));const observerWeb=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting?(e.target.classList.add("intersect-show"),e.target.classList.remove("intersect-hidden")):(e.target.classList.add("intersect-hidden"),e.target.classList.remove("intersect-show"))}))})),header=document.querySelector("#header"),headernavbar=document.querySelector("#header-navbar"),buttonnavbar=document.querySelector("#button-navbar"),callButton=document.querySelector("#call-button");buttonnavbar.addEventListener("click",(e=>{headernavbar.classList.contains("show-navbar")?headernavbar.classList.remove("show-navbar"):headernavbar.classList.add("show-navbar")}));const elementsObserver=document.querySelectorAll(".intersect");elementsObserver.forEach((e=>observerWeb.observe(e))),window.onscroll=function(){handleScroll()};const handleScroll=()=>{window.pageYOffset>90?(header.classList.add("bg-header-fixed"),headernavbar.style.backgroundColor="#FFFFFF",buttonnavbar.children[0].children[0].style.stroke="#282828",buttonnavbar.children[0].children[1].style.stroke="#282828",buttonnavbar.children[0].children[2].style.stroke="#282828",document.querySelector("#logo").children[0].children[0].style.fill="#282828",callButton.classList.add("call-btn-fixed"),callButton.children[1].children[0].style.fill="#ffffff"):(header.classList.remove("bg-header-fixed"),headernavbar.style.backgroundColor="#4824F9",buttonnavbar.children[0].children[0].style.stroke="#ffffff",buttonnavbar.children[0].children[1].style.stroke="#ffffff",buttonnavbar.children[0].children[2].style.stroke="#ffffff",document.querySelector("#logo").children[0].children[0].style.fill="#ffffff",callButton.classList.remove("call-btn-fixed"),callButton.children[1].children[0].style.fill="#4824F9")},openModal=document.querySelector("#open-modal"),closeModal=document.querySelector("#close-modal"),videoContainer=document.querySelector("#video-container");openModal.addEventListener("click",(()=>{videoContainer.classList.add("modal-active")})),closeModal.addEventListener("click",(()=>{videoContainer.classList.remove("modal-active")})),document.onkeydown=function(e){27==(e=e||window.event).keyCode&&videoContainer.classList.remove("modal-active")};
+  </script>
   
 </body>
 </html>
